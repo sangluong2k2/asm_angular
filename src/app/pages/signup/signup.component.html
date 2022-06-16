@@ -1,0 +1,45 @@
+<div class="container w-[80%] mx-auto ">
+    <app-header></app-header>
+    <div class="w-[20%] mx-auto my-[50px] border rounded p-[20px]">
+        <form (ngSubmit)="onSubmit()" #formSignup="ngForm">
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form1Example1">Name</label> <br>
+            <input type="text" id="form1Example1" [(ngModel)]="User.name" class="form-control" name="name" #name="ngModel" required minlength="3" />
+            <div *ngIf="name.errors" class="alert">
+              <span *ngIf="name.errors?.['required'] && (name.dirty || name.touched)" class="text-red-600"> Name is
+                required</span>
+            </div>
+            <div *ngIf="name.errors?.['minlength'] && (name.dirty || name.touched)" class="alert alert-danger">
+              Min length la 3
+            </div>
+          </div>
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form1Example1">Email address</label> <br>
+            <input type="email" id="form1Example1" [(ngModel)]="User.email" class="form-control" name="email" #name="ngModel"
+              required />
+            <div *ngIf="name.errors" class="alert">
+              <span *ngIf="name.errors?.['required'] && (name.dirty || name.touched)" class="text-red-600"> Name is
+                required</span>
+            </div>
+          </div>
+      
+          <!-- Password input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form1Example2">Password</label> <br>
+            <input type="password" id="form1Example2" [(ngModel)]="User.password" class="form-control" name="password"
+              #name="ngModel" required />
+            <div *ngIf="name.errors" class="alert">
+              <span *ngIf="name.errors?.['required'] && (name.dirty || name.touched)" class="text-red-600"> Name is
+                required</span>
+            </div>
+      
+          </div>
+          <!-- Submit button -->
+          <button type="submit" [disabled]="!formSignup.valid"
+            class="btn btn-primary btn-block rounded border w-[100px] bg-blue-600 text-white">Sign
+            up</button>
+        </form>
+      </div>
+    <app-footer></app-footer>
+</div>

@@ -22,7 +22,14 @@ import { AdminUserPageComponent } from './pages/admin/Users/admin-user-page/admi
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { AddPostComponent } from './pages/admin/Posts/add-post/add-post.component';
 import { AddProjectComponent } from './pages/admin/Project/add-project/add-project.component';
-import { EditUserComponent } from './pages/admin/Users/edit-user/edit-user.component'
+import { EditUserComponent } from './pages/admin/Users/edit-user/edit-user.component';
+import { SigninComponent } from './pages/signin/signin.component';
+import { SignupComponent } from './pages/signup/signup.component';
+
+import { ProjectcateComponent } from './pages/admin/projectcate/projectcate.component';
+import { PostcateComponent } from './pages/admin/Posts/postcate/postcate.component';
+import { AddPostcateComponent } from './pages/admin/Posts/add-postcate/add-postcate.component';
+import { AddCateProjectComponent } from './pages/admin/add-cate-project/add-cate-project.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +49,13 @@ import { EditUserComponent } from './pages/admin/Users/edit-user/edit-user.compo
     ContactPageComponent,
     AddPostComponent,
     AddProjectComponent,
-    EditUserComponent
+    EditUserComponent,
+    SigninComponent,
+    SignupComponent,
+    ProjectcateComponent,
+    PostcateComponent,
+    AddPostcateComponent,
+    AddCateProjectComponent
   ],
   imports: [
     BrowserModule,

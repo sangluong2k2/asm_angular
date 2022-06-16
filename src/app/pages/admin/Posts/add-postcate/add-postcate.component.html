@@ -1,0 +1,22 @@
+<form (submit)="onSubmit()">
+
+
+    <div #formAdd="" class="mb-3">
+        <label for="">Name</label>
+        <input type="text" class="w-full indent-[10px] border-b" [(ngModel)]="CatePost.name" name="title" #name="ngModel"
+            required minlength="10">
+    </div>
+
+    <div ngClass="" *ngIf="name.errors" class="alert">
+        <p *ngIf="name.errors?.['required'] && (name.dirty || name.touched)" class="alert alert-danger">
+            Title is required
+        </p>
+        <p *ngIf="name.errors?.['minlength'] && (name.dirty || name.touched)" class="alert alert-danger">
+            At least 10 characters
+        </p>
+    </div>
+
+
+    <button [disabled]="!formAdd"
+        class="btn btn-primary mt-3 border rounded bg-blue-600 text-white px-[10px]">Submit</button>
+</form>

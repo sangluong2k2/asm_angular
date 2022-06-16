@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IProject } from 'src/app/model/Projects';
+import { ProjectService } from 'src/app/services/project.service';
 
 @Component({
   selector: 'app-admin-project-page',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminProjectPageComponent implements OnInit {
 
-  constructor() { }
+  ProjectList!: IProject[] | any[]
+  constructor(private projectServices: ProjectService) { }
 
   ngOnInit(): void {
+    this.showProject()
   }
-
+  showProject(){
+    this.projectServices.getprojects().subscribe(data => {
+      this.ProjectList = data
+    })
+  }
+  onRemove(id:number){
+    this.projectServices.deleteproject(id).subscribe(() => {
+      this.ProjectList = this.ProjectList.filter(item => item.id !== id)
+    })
+  }
 }

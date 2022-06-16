@@ -1,0 +1,99 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "name": "Sang",
+      "position": "Front-end Developer",
+      "about": "aaaaaa",
+      "cv": "./src/app/image/277302488_699416914577375_3121533364294341597_n (1).jpg",
+      "image": "https://res.cloudinary.com/dkhutgvlb/image/upload/v1654859446/277302488_699416914577375_3121533364294341597_n_1_dbuaqn.jpg",
+      "fullname": "Lương Duy Sang",
+      "phone": "0862390156",
+      "address": "Phuc Tho district, Hanoi"
+    }
+  ],
+  "users": [
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$tdSWYgOIkjzgK0hk.BIB3.OZYg/0x4TAD5Wv0djEDTUYvDc.se.DO",
+      "name": "Nhat db",
+      "id": 1
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Making a design system from scratch",
+      "content": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      "short_desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      "created_at": "12 Feb 2020",
+      "categoryPostId": 1
+    },
+    {
+      "id": 2,
+      "title": "UI Interactions of the week",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti doloribus, veniam laborum quo dolores ducimus fuga est! Ullam iure illum, consequuntur rerum, laboriosam fuga porro praesentium sit fugiat quod magni.Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti doloribus, veniam laborum quo dolores ducimus fuga est! Ullam iure illum, consequuntur rerum, laboriosam fuga porro praesentium sit fugiat quod magni.",
+      "short_desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      "created_at": "12 Feb 2020",
+      "categoryPostId": 2
+    }
+  ],
+  "categoryPosts": [
+    {
+      "id": 1,
+      "name": "Design"
+    },
+    {
+      "id": 2,
+      "name": "Pattern"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Website Mixi shop",
+      "image": "https://res.cloudinary.com/dkhutgvlb/image/upload/v1654859446/277302488_699416914577375_3121533364294341597_n_1_dbuaqn.jpg",
+      "createAt": "2022",
+      "categoriesProjectId": 1,
+      "short_desc": "aaaaaaaa",
+      "desc": "ấdasdasdasd"
+    },
+    {
+      "id": 2,
+      "name": "Website Mixi shop",
+      "image": "https://res.cloudinary.com/dkhutgvlb/image/upload/v1654859446/277302488_699416914577375_3121533364294341597_n_1_dbuaqn.jpg",
+      "createAt": "2022",
+      "categoriesProjectId": 1,
+      "short_desc": "aaaaaaaa",
+      "desc": "ấdasdasdasd"
+    },
+    {
+      "id": 3,
+      "name": "Website Mixi shop",
+      "image": "https://res.cloudinary.com/dkhutgvlb/image/upload/v1654859446/277302488_699416914577375_3121533364294341597_n_1_dbuaqn.jpg",
+      "createAt": "2022",
+      "categoriesProjectId": 1,
+      "short_desc": "aaaaaaaa",
+      "desc": "ấdasdasdasd"
+    },
+    {
+      "id": 4,
+      "name": "Website Mixi shop",
+      "image": "https://res.cloudinary.com/dkhutgvlb/image/upload/v1654859446/277302488_699416914577375_3121533364294341597_n_1_dbuaqn.jpg",
+      "createAt": "2022",
+      "categoriesProjectId": 1,
+      "short_desc": "aaaaaaaa",
+      "desc": "ấdasdasdasd"
+    }
+  ],
+  "categoriesProjects": [
+    {
+      "id": 1,
+      "name": "Công Nghệ"
+    },
+    {
+      "id": 2,
+      "name": "Tin Tức"
+    }
+  ]
+}

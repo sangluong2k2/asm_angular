@@ -22,34 +22,20 @@
                     My Projects
                 </div>
                 <div class="w-full  grid  gap-4 ">
-                    <div class=" border-b pb-[20px] flex">
-                        <div class="img w-[30%] mr-[5%] ">
-                            <img class="w-[246px] h-[180px] object-cover rounded-[10px]" src="./images/Styleshout.png" alt="">
+                    <div class=" border-b pb-[20px] flex" *ngFor="let project of Project " routerLink="/work/{{project.id}}">
+                        <div class="img w-[246px] mr-[5%] ">
+                            <img class="w-[246px] h-[180px] object-cover rounded-[10px]" src="{{project.image}}" alt="">
                         </div>
-                        <div class="w-[65%]">
-                            <p class="font-bold text-[24px] mb-4">Designing Dashboards</p>
-                            <p class="mb-4 text-[18px] text-[#8695A4]"><span class="text-white border rounded-[20px] bg-[#142850] px-[10px]"> 2020</span>  <span>Design, Pattern</span></p>
-                            <p class="">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-                                consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                        </div>
-                    </div>
-                    <div class=" border-b pb-[20px] flex">
-                        <div class="img w-[30%] mr-[5%] ">
-                            <img class="w-[246px] h-[180px] object-cover rounded-[10px]" src="./images/Styleshout.png" alt="">
-                        </div>
-                        <div class="w-[65%]">
-                            <p class="font-bold text-[24px] mb-4">Designing Dashboards</p>
-                            <p class="mb-4 text-[18px] text-[#8695A4]"><span class="text-white border rounded-[20px] bg-[#142850] px-[10px]"> 2020</span>  <span>Design, Pattern</span></p>
-                            <p class="">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-                                consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                        <div class="w-[60%]">
+                            <p class="font-bold text-[24px] mb-4">{{project.name}}</p>
+                            <p class="mb-4 text-[14px] text-[#8695A4]"><span class="text-white border rounded-[20px] bg-[#142850] px-[10px] mr-[10px]">{{project.createAt}}</span>  <span>{{project.categoriesProject.name}}</span></p>
+                            <p class="">{{project.short_desc}}</p>
                         </div>
                     </div>
-                   
-
                 </div>
             </div>
             <div class="border rounded-[10px] ">
-                <div class="p-4 grid gap-4">
+                <div class="p-4 grid gap-4" *ngFor="let user of User">
                     <div class="w-full text-[30px] font-bold mb-[30px]">
                         My Profile
                     </div>
@@ -57,7 +43,7 @@
                         <i class='bx bxs-user text-[28px] bg-black text-white p-2 rounded mr-[20px] '></i>  
                         <div>
                             <p class="text-[18px] font-bold">Full name</p>
-                            <p class="text-[14px]">Lương Duy Sang</p>
+                            <p class="text-[14px]">{{user.fullname}}</p>
                            
                         </div>
                     </div>
@@ -65,7 +51,7 @@
                         <i class='bx bxs-phone text-[28px] bg-black text-white p-2 rounded mr-[20px] '></i>  
                         <div>
                             <p class="text-[18px] font-bold">Phone number</p>
-                            <p class="text-[14px]">0862390156</p>
+                            <p class="text-[14px]">{{user.phone}}</p>
                            
                         </div>
                     </div>
@@ -73,7 +59,7 @@
                         <i class='bx bxs-location-plus text-[28px] bg-black text-white p-2 rounded mr-[20px] '></i>  
                         <div>
                             <p class="text-[18px] font-bold">Address</p>
-                            <p class="text-[14px]">Phuc Tho district, Hanoi </p>
+                            <p class="text-[14px]">{{user.address}} </p>
                            
                         </div>
                     </div>
@@ -83,14 +69,14 @@
         </div>
     </div>
     <div class="footer w-full">
-        <div class="section w-[20%] mx-auto grid grid-rows-2">
-            <div class="flex w-full mb-[10px]">
-                <i class='bx bxl-facebook-square w-[25%] text-[40px] '></i>
-                <i class='bx bxl-instagram-alt w-[25%] text-[40px] '  ></i>
-                <i class='bx bxl-twitter w-[25%] text-[40px] ' ></i>
-                <i class='bx bxl-linkedin-square w-[25%] text-[40px] '></i>
+        <div class="section text-center  items-center  mx-auto ">
+            <div class="flex  justify-center mb-[10px]">
+                <i class='bx bxl-facebook-square  text-[40px] '></i>
+                <i class='bx bxl-instagram-alt  text-[40px] '  ></i>
+                <i class='bx bxl-twitter  text-[40px] ' ></i>
+                <i class='bx bxl-linkedin-square  text-[40px] '></i>
             </div>
-            <div class="w-[95%] mx-auto">
+            <div class=" mx-auto">
                 <p class="text-[13px]">Copyright ©2020 All rights reserved </p>
             </div>
         </div>

@@ -18,22 +18,20 @@
 
     <div class="section w-full mb-[100px]">
         <div class="container w-[60%] mx-auto border rounded p-4">
-            <p class="text-center font-bold text-[32px]">UI Interactions of the week</p>
-            <p class=" text-center mb-4 text-[16px] text-[#8695A4]"><span class="">12 Feb 2020</span> | <span>Design,
-                    Pattern</span></p>
-            <p class="text-[20px]">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat
-                duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            <p class="text-center font-bold text-[32px]">{{Post.title}}</p>
+            <p class=" text-center mb-4 text-[16px] text-[#8695A4]"><span class="">{{Post.created_at}}</span> | <span>{{Post.categoryPost.name}}</span></p>
+            <p class="text-[20px]">{{Post.content}}</p>
         </div>
     </div>
     <div class="footer w-full">
-        <div class="section w-[20%] mx-auto grid grid-rows-2">
-            <div class="flex w-full mb-[10px]">
-                <i class='bx bxl-facebook-square w-[25%] text-[40px] '></i>
-                <i class='bx bxl-instagram-alt w-[25%] text-[40px] '></i>
-                <i class='bx bxl-twitter w-[25%] text-[40px] '></i>
-                <i class='bx bxl-linkedin-square w-[25%] text-[40px] '></i>
+        <div class="section text-center  items-center  mx-auto ">
+            <div class="flex  justify-center mb-[10px]">
+                <i class='bx bxl-facebook-square  text-[40px] '></i>
+                <i class='bx bxl-instagram-alt  text-[40px] '  ></i>
+                <i class='bx bxl-twitter  text-[40px] ' ></i>
+                <i class='bx bxl-linkedin-square  text-[40px] '></i>
             </div>
-            <div class="w-[95%] mx-auto">
+            <div class=" mx-auto">
                 <p class="text-[13px]">Copyright ©2020 All rights reserved </p>
             </div>
         </div>

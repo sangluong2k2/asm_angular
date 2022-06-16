@@ -1,0 +1,40 @@
+<div class="container w-full mx-auto ">
+    <div class="header flex w-[80%] mb-[20px] mx-auto ">
+        <div class="logo w-[75%]">
+
+        </div>
+        <div class="navbar w-[25%]">
+            <ul class="menu flex ">
+                <li class="text-black font-bold text-[20px] p-3  hover:underline hover:text-blue-600"><a
+                        routerLink="/project">Projects</a></li>
+                <li class="text-black font-bold text-[20px] p-3  hover:underline hover:text-blue-600"><a
+                        routerLink="/post">Posts</a></li>
+                <li class="text-black font-bold text-[20px] p-3  hover:underline hover:text-blue-600"><a
+                        routerLink="/contact">Contact</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="section w-full mb-[100px]">
+        <div class="container w-[60%] mx-auto border rounded p-4">
+            <p class="text-center font-bold text-[32px]">{{Project.name}}</p>
+            <p class=" text-center mb-4 text-[16px] text-[#8695A4]"><span class="">{{Project.createAt}}</span> | <span>{{Project.categoriesProject.name}}</span></p>
+            <img class="w-[426px] h-[360px] mx-auto object-cover" src="{{Project.image}}" alt="">
+            <p class="text-[20px]">{{Project.desc}}</p>
+        </div>
+    </div>
+    <div class="footer w-full">
+        <div class="section text-center  items-center  mx-auto ">
+            <div class="flex  justify-center mb-[10px]">
+                <i class='bx bxl-facebook-square  text-[40px] '></i>
+                <i class='bx bxl-instagram-alt  text-[40px] '  ></i>
+                <i class='bx bxl-twitter  text-[40px] ' ></i>
+                <i class='bx bxl-linkedin-square  text-[40px] '></i>
+            </div>
+            <div class=" mx-auto">
+                <p class="text-[13px]">Copyright ©2020 All rights reserved </p>
+            </div>
+        </div>
+    </div>
+</div>

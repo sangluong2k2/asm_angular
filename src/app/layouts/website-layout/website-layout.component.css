@@ -1,0 +1,30 @@
+@media (max-width: 640px) {
+    .user{
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .header{
+        width: auto;
+        height: auto;
+    }
+   .box{
+        grid-template-columns: 1fr;
+   }
+   .box2{
+    display: grid;
+    grid-template-columns: 1fr;
+   }
+   .box2 .img{
+    width: 100%;
+    height: auto;
+   }
+   .box2 .img img {
+    width: 100%;
+    height: auto;
+   }
+   .box2 .text {
+        text-align: left;
+   }
+}

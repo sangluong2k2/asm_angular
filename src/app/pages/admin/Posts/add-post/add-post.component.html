@@ -1,1 +1,38 @@
-<p>add-post works!</p>
+<form (submit)="onSubmit()">
+
+    <div>
+        <label for="">Categories</label>
+        <select name="categoryId" [(ngModel)]="Post.categoryPostId" class="w-full indent-[10px] border-b mb-3"
+            #name="ngModel" required>
+            <option *ngFor="let item of catePostList" value="{{item.id}}">{{item.name}}</option>
+        </select>
+    </div>
+
+    <div #formAdd="" class="mb-3">
+        <label for="">Title</label>
+        <input type="text" class="w-full indent-[10px] border-b" [(ngModel)]="Post.title" name="title"
+             #name="ngModel" required minlength="10">
+    </div>
+    <div #formAdd="" class="mb-3">
+        <label for="">short desc</label>
+        <input type="text" class="w-full indent-[10px] border-b" [(ngModel)]="Post.short_desc" name="title"
+            #name="ngModel" required minlength="10">
+    </div>
+
+    <div>
+        <label for="">Content</label>
+        <textarea class="w-full indent-[10px] border-b" name="content" [(ngModel)]="Post.content" #name="ngModel"
+            required id="" cols="30" rows="10"></textarea>
+
+        <div ngClass="" *ngIf="name.errors" class="alert">
+            <p *ngIf="name.errors?.['required'] && (name.dirty || name.touched)" class="alert alert-danger">
+                Title is required
+            </p>
+            <p *ngIf="name.errors?.['minlength'] && (name.dirty || name.touched)" class="alert alert-danger">
+                At least 10 characters
+            </p>
+        </div>
+    </div>
+
+    <button [disabled]="!formAdd" class="btn btn-primary mt-3 border rounded bg-blue-600 text-white px-[10px]">Submit</button>
+</form>

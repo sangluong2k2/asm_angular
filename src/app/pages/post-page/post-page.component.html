@@ -18,32 +18,38 @@
 
     <div class="section w-full mb-[100px]">
         <div class="container w-[60%] mx-auto">
-            <div class="w-[90%] mx-auto flex mb-[50px] pt-[20px]">
+            <div class="w-[90%] mx-auto flex mb-[50px] pt-[20px] justify-between">
                 <p class="w-[90%] text-[36px] font-bold">Posts</p>
+                <ul class="flex justify-between items-center">
+                    <li
+                        class="p-[10px] border hover:bg-[#1b74e4] hover:text-white min-w-[70px]  text-center hover:bg-blue-500 hover:text-white">
+                        <button>All</button></li>
+                    <li class="p-[10px] border hover:bg-[#1b74e4] hover:text-white min-w-[70px]  text-center hover:bg-blue-500 hover:text-white"
+                        *ngFor="let item of CateList"><button (click)="onFilter(item.id)">{{item.name}}</button></li>
+                </ul>
+
             </div>
             <div class="w-[90%] mx-auto grid gap-4 ">
-                <div class=" border-b pb-[20px]">
+                <div class=" border-b pb-[20px]" *ngFor="let post of PostList" routerLink="/post/{{post.id}}">
                     <div class="">
-                        <p class="font-bold text-[24px] mb-4">UI Interactions of the week</p>
-                        <p class="mb-4 text-[18px] text-[#8695A4]"><span class="text-black">12 Feb 2020</span> | <span>Design, Pattern</span></p>
-                        <p class="">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-                            consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                        <p class="font-bold text-[24px] mb-4">{{post.title}}</p>
+                        <p class="mb-4 text-[18px] text-[#8695A4]"><span class="text-black">{{post.created_at}}</span>
+                        </p>
+                        <p class="">{{post.short_desc}}</p>
                     </div>
                 </div>
-                
-
             </div>
         </div>
     </div>
     <div class="footer w-full">
-        <div class="section w-[20%] mx-auto grid grid-rows-2">
-            <div class="flex w-full mb-[10px]">
-                <i class='bx bxl-facebook-square w-[25%] text-[40px] '></i>
-                <i class='bx bxl-instagram-alt w-[25%] text-[40px] '  ></i>
-                <i class='bx bxl-twitter w-[25%] text-[40px] ' ></i>
-                <i class='bx bxl-linkedin-square w-[25%] text-[40px] '></i>
+        <div class="section text-center  items-center  mx-auto ">
+            <div class="flex  justify-center mb-[10px]">
+                <i class='bx bxl-facebook-square  text-[40px] '></i>
+                <i class='bx bxl-instagram-alt  text-[40px] '></i>
+                <i class='bx bxl-twitter  text-[40px] '></i>
+                <i class='bx bxl-linkedin-square  text-[40px] '></i>
             </div>
-            <div class="w-[95%] mx-auto">
+            <div class=" mx-auto">
                 <p class="text-[13px]">Copyright ©2020 All rights reserved </p>
             </div>
         </div>

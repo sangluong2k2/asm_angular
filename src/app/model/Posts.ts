@@ -4,5 +4,5 @@ export interface IPost {
     content: string,
     short_desc: string,
     created_at: string,
-    categoryId?: number
+    categoryPostId?: number
 }
