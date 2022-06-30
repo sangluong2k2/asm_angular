@@ -35,7 +35,7 @@ const routes: Routes = [
   {path: "signin", component:SigninComponent},
   {path: "signup", component:SignupComponent},
 
-  {path: "admin",canActivate:[AdminGuard], component:AdminLayoutComponent, children:[
+  {path: "admin", component:AdminLayoutComponent, children:[
     
     {path: "post", component:AdminPostPageComponent},
     {path: "post/add", component:AddPostComponent},
